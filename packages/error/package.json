@@ -1,0 +1,16 @@
+{
+  "name": "@kanziw/error",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanziw/kanziwjs.git",
+    "directory": "packages/error"
+  },
+  "author": {
+    "name": "Jiwoong Jung",
+    "email": "kanziwoong@gmail.com"
+  },
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
