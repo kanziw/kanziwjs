@@ -14,11 +14,14 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
+    "lint": "yarn workspace kanziwjs lint",
+    "test": "yarn workspace kanziwjs test",
     "clean": "rimraf dist",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
   },
   "devDependencies": {
+    "@types/node": "^17.0.25",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
   }

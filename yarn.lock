@@ -1596,6 +1596,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kanziw/time@workspace:packages/time"
   dependencies:
+    "@types/node": ^17.0.25
     rimraf: ^3.0.2
     typescript: ^4.6.3
   languageName: unknown

@@ -2796,6 +2796,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/time/",\
           "packageDependencies": [\
             ["@kanziw/time", "workspace:packages/time"],\
+            ["@types/node", "npm:17.0.25"],\
             ["rimraf", "npm:3.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
           ],\
