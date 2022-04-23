@@ -27,12 +27,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "eslint-config-kanziw",\
         "reference": "workspace:packages/eslint-config-kanziw"\
+      },\
+      {\
+        "name": "@kanziw/time",\
+        "reference": "workspace:packages/time"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
       ["@kanziw/error", ["workspace:packages/error"]],\
+      ["@kanziw/time", ["workspace:packages/time"]],\
       ["eslint-config-kanziw", ["virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#workspace:packages/eslint-config-kanziw", "workspace:packages/eslint-config-kanziw"]],\
       ["kanziwjs", ["workspace:."]]\
     ],\
@@ -99,6 +104,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/error/",\
           "packageDependencies": [\
             ["@kanziw/error", "workspace:packages/error"],\
+            ["rimraf", "npm:3.0.2"],\
+            ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@kanziw/time", [\
+        ["workspace:packages/time", {\
+          "packageLocation": "./packages/time/",\
+          "packageDependencies": [\
+            ["@kanziw/time", "workspace:packages/time"],\
             ["rimraf", "npm:3.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
           ],\

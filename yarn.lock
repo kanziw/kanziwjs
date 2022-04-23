@@ -49,6 +49,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@kanziw/time@workspace:packages/time":
+  version: 0.0.0-use.local
+  resolution: "@kanziw/time@workspace:packages/time"
+  dependencies:
+    rimraf: ^3.0.2
+    typescript: ^4.6.3
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
