@@ -13,6 +13,7 @@
   },
   "packageManager": "yarn@3.2.0",
   "scripts": {
+    "build": "yarn workspaces foreach --topological-dev --parallel run build",
     "lint": "eslint packages",
     "test": "jest"
   },
