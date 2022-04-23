@@ -1,0 +1,8 @@
+{
+  "name": "kanziwjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanziw/kanziwjs.git"
+  },
+  "packageManager": "yarn@3.2.0"
+}
