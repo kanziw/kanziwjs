@@ -95,6 +95,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/error/",\
           "packageDependencies": [\
             ["@kanziw/error", "workspace:packages/error"],\
+            ["rimraf", "npm:3.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
           ],\
           "linkType": "SOFT"\

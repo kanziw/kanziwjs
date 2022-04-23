@@ -2,4 +2,4 @@
 /.yarn/
 /.pnp.*js
 
-dist/
+lib/
