@@ -13,16 +13,26 @@
   },
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "eslint packages"
+    "lint": "eslint packages",
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.25",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "babel-jest": "^27.5.1",
     "eslint": "^8.14.0",
     "eslint-config-kanziw": "workspace:^",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-promise": "^6.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   }
 }
