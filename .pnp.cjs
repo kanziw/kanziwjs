@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:2.26.0"],\
             ["eslint-plugin-n", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:15.1.0"],\
             ["eslint-plugin-promise", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:6.0.0"],\
+            ["husky", "npm:7.0.4"],\
             ["jest", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:27.5.1"],\
             ["ts-jest", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:27.1.4"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
@@ -5725,6 +5726,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["husky", [\
+        ["npm:7.0.4", {\
+          "packageLocation": "./.yarn/cache/husky-npm-7.0.4-917ba035c6-c6ec4af63d.zip/node_modules/husky/",\
+          "packageDependencies": [\
+            ["husky", "npm:7.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["iconv-lite", [\
         ["npm:0.4.24", {\
           "packageLocation": "./.yarn/cache/iconv-lite-npm-0.4.24-c5c4ac6695-bd9f120f5a.zip/node_modules/iconv-lite/",\
@@ -6821,6 +6831,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:2.26.0"],\
             ["eslint-plugin-n", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:15.1.0"],\
             ["eslint-plugin-promise", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:6.0.0"],\
+            ["husky", "npm:7.0.4"],\
             ["jest", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:27.5.1"],\
             ["ts-jest", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:27.1.4"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
