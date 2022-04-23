@@ -7,7 +7,7 @@ describe('cancellableDelay', () => {
     const foo = await cancellableDelay(100, 'foo').promise
 
     expect(foo).toEqual('foo')
-    expect(stopwatch.end()).toBeGreaterThanOrEqual(100)
+    expect(stopwatch.end()).toBeGreaterThanOrEqual(90)
   })
 
   test('cancel', async() => {
@@ -20,6 +20,6 @@ describe('cancellableDelay', () => {
       delay1000.promise,
     ])
 
-    expect(stopwatch.end()).toBeLessThan(1000)
+    expect(stopwatch.end()).toBeLessThan(500)
   })
 })

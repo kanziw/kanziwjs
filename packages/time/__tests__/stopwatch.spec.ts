@@ -7,7 +7,7 @@ describe('startStopwatch', () => {
     await delay(100)
 
     const elapsedMs = stopwatch.end()
-    expect(elapsedMs).toBeGreaterThanOrEqual(100)
+    expect(elapsedMs).toBeGreaterThanOrEqual(90)
     expect(elapsedMs).toBeLessThan(200)
   })
 })
