@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/time",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "yarn workspace kanziwjs lint",
     "test": "yarn workspace kanziwjs test",
-    "clean": "rimraf dist",
+    "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
   },

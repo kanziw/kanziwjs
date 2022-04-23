@@ -14,7 +14,7 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
   },

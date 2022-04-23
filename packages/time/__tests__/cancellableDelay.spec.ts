@@ -1,5 +1,5 @@
-import { cancellableDelay } from './cancellableDelay'
-import { startStopwatch } from './stopwatch'
+import { cancellableDelay } from '../src/cancellableDelay'
+import { startStopwatch } from '../src/stopwatch'
 
 describe('cancellableDelay', () => {
   test('delay', async() => {
