@@ -16,6 +16,10 @@ jobs:
         run: |
           yarn lint
 
+      - name: Build for type check
+        run: |
+          yarn build --noEmit
+
   test:
     runs-on: ubuntu-latest
     steps:
