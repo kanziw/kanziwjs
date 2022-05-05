@@ -14,8 +14,8 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs lint",
-    "test": "yarn workspace kanziwjs test",
+    "lint": "yarn workspace kanziwjs eslint packages/cipher",
+    "test": "yarn workspace kanziwjs test packages/cipher",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
