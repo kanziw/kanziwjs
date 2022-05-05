@@ -1,0 +1,23 @@
+on:
+  - push
+
+name: Publish
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Publish packages (Dry Run)
+        if: github.ref != 'refs/heads/main'
+        run: |
+          yarn publish --dry-run
+
+      - name: Publish packages
+        if: github.ref == 'refs/heads/main'
+        run: |
+          yarn publish

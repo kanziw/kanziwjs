@@ -1928,6 +1928,7 @@ __metadata:
     "@types/jest": ^27.5.0
     "@types/node": ^17.0.25
     jest: ^28.0.3
+    publish-if-not-published: ^3.1.2
     rimraf: ^3.0.2
     typescript: ^4.6.3
   languageName: unknown
@@ -1937,6 +1938,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@kanziw/error@workspace:packages/error"
   dependencies:
+    publish-if-not-published: ^3.1.2
     rimraf: ^3.0.2
     typescript: ^4.6.3
   languageName: unknown
@@ -1948,6 +1950,7 @@ __metadata:
   dependencies:
     "@types/jest": ^27.5.0
     "@types/node": ^17.0.25
+    publish-if-not-published: ^3.1.2
     rimraf: ^3.0.2
     typescript: ^4.6.3
   languageName: unknown
@@ -2140,16 +2143,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^27.4.1":
-  version: 27.4.1
-  resolution: "@types/jest@npm:27.4.1"
-  dependencies:
-    jest-matcher-utils: ^27.0.0
-    pretty-format: ^27.0.0
-  checksum: 5184f3eef4832d01ee8f59bed15eec45ccc8e29c724a5e6ce37bf74396b37bdf04f557000f45ba4fc38ae6075cf9cfcce3d7a75abc981023c61ceb27230a93e4
-  languageName: node
-  linkType: hard
-
 "@types/jest@npm:^27.5.0":
   version: 27.5.0
   resolution: "@types/jest@npm:27.5.0"
@@ -2174,7 +2167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^17.0.25":
+"@types/node@npm:^17.0.25":
   version: 17.0.25
   resolution: "@types/node@npm:17.0.25"
   checksum: 6a820bd624e69ea772f52a6cdb326484eff5829443dc981939373929ade109f58c21698b9f0a831bd6ceea799e722a75dc49c5fa7a6bc32a81e1cbdfc6507b64
@@ -2185,6 +2178,13 @@ __metadata:
   version: 2.6.0
   resolution: "@types/prettier@npm:2.6.0"
   checksum: 946f1f82ce6f31664e023a5d65931c31b7d677b454f528f67dce851d72e7fcfe713076f4251b16c3646eecf1545f5f5b909b4962966341ed9ddf5b80113b3674
+  languageName: node
+  linkType: hard
+
+"@types/semver@npm:^7.3.9":
+  version: 7.3.9
+  resolution: "@types/semver@npm:7.3.9"
+  checksum: 60bfcfdfa7f937be2c6f4b37ddb6714fb0f27b05fe4cbdfdd596a97d35ed95d13ee410efdd88e72a66449d0384220bf20055ab7d6b5df10de4990fbd20e5cbe0
   languageName: node
   linkType: hard
 
@@ -2202,6 +2202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/yargs-parser@npm:^20.2.1":
+  version: 20.2.2
+  resolution: "@types/yargs-parser@npm:20.2.2"
+  checksum: f5a57ba32b624e577c3c8c38c5dbf4531b92787b9323c15154232a083d2c6654d00df4ce8330bf048920775528d3162eddaa36429f746de0043eb34234acf4fd
+  languageName: node
+  linkType: hard
+
 "@types/yargs@npm:^16.0.0":
   version: 16.0.4
   resolution: "@types/yargs@npm:16.0.4"
@@ -2211,7 +2218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^17.0.8":
+"@types/yargs@npm:^17.0.7, @types/yargs@npm:^17.0.8":
   version: 17.0.10
   resolution: "@types/yargs@npm:17.0.10"
   dependencies:
@@ -2880,7 +2887,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -3391,6 +3398,7 @@ __metadata:
     eslint-plugin-import: ^2.26.0
     eslint-plugin-n: ^15.1.0
     eslint-plugin-promise: ^6.0.0
+    publish-if-not-published: ^3.1.2
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^5.20.0
     "@typescript-eslint/parser": ^5.20.0
@@ -6292,6 +6300,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"publish-if-not-published@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "publish-if-not-published@npm:3.1.2"
+  dependencies:
+    "@types/node": ^14.11.8
+    "@types/semver": ^7.3.9
+    "@types/yargs": ^17.0.7
+    "@types/yargs-parser": ^20.2.1
+    chalk: ^4.1.0
+    regenerator-runtime: ^0.13.9
+    semver: ^7.3.5
+    yargs: ^17.3.0
+    yargs-parser: ^21.0.0
+  bin:
+    publish-if-not-published: lib/cli.js
+  checksum: b860762e9a0d421c964a12954960a33c3174f9ed05d1e527b370ee2373c66d0046e43fe1dc24e43091776500cdc8fa1fd8ce97ef92f60b29e33c7c962afe3fbc
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0, punycode@npm:^2.1.1":
   version: 2.1.1
   resolution: "punycode@npm:2.1.1"
@@ -6347,7 +6374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.4":
+"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.9":
   version: 0.13.9
   resolution: "regenerator-runtime@npm:0.13.9"
   checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e
@@ -6479,7 +6506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
+"rimraf@npm:^3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
   dependencies:
@@ -7025,7 +7052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^4.6.3#~builtin<compat/typescript>":
   version: 4.6.3
   resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"
   bin:
@@ -7368,7 +7395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.3.1":
+"yargs@npm:^17.3.0, yargs@npm:^17.3.1":
   version: 17.4.1
   resolution: "yargs@npm:17.4.1"
   dependencies:

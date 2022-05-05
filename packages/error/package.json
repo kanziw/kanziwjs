@@ -23,9 +23,10 @@
     "clean": "rimraf lib",
     "lint": "yarn workspace kanziwjs eslint packages/error",
     "build": "yarn clean && yarn tsc",
-    "publish": "yarn build && yarn npm publish --access public"
+    "publish": "yarn build && yarn publish-if-not-published"
   },
   "devDependencies": {
+    "publish-if-not-published": "^3.1.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
   },
