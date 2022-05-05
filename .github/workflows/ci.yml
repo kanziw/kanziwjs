@@ -33,3 +33,5 @@ jobs:
         with:
           test-script: yarn jest
           package-manager: yarn
+
+      - uses: codecov/codecov-action@v2
