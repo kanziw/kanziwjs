@@ -1,4 +1,5 @@
 import { setTimeout as delay } from 'timers/promises'
+
 import { startStopwatch } from '../stopwatch'
 
 describe('startStopwatch', () => {

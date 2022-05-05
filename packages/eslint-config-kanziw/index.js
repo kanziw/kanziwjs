@@ -16,9 +16,12 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'simple-import-sort',
   ],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'space-before-function-paren': ['error', 'never'],
   },
 }
