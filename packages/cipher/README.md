@@ -1,4 +1,4 @@
-# cipher
+# @kanziw/cipher
 
 ## Install
 

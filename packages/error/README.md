@@ -1,5 +1,4 @@
-# error
-
+# @kanziw/error
 
 ## wrapUnknownError
 

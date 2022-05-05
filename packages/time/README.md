@@ -1,4 +1,4 @@
-# time
+# @kanziw/time
 
 ## cancellableDelay
 
