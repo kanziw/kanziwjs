@@ -1,11 +1,20 @@
 {
   "name": "@kanziw/time",
-  "version": "0.0.3",
+  "version": "0.0.5",
+  "description": "A collection of utility libraries about time",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/time"
   },
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/time#readme",
+  "keywords": [
+    "time",
+    "kanziw",
+    "delay",
+    "cancellable delay",
+    "stopwatch"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -14,15 +23,17 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs lint",
-    "test": "yarn workspace kanziwjs test",
+    "lint": "yarn workspace kanziwjs eslint packages/time",
+    "test": "yarn workspace kanziwjs test packages/time",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.0",
     "@types/node": "^17.0.25",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
-  }
+  },
+  "license": "MIT"
 }

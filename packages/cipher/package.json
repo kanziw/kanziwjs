@@ -1,11 +1,19 @@
 {
   "name": "@kanziw/cipher",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "description": "Encrypt and decrypt between string and string",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/cipher"
   },
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/cipher#readme",
+  "keywords": [
+    "cipher",
+    "kanziw",
+    "aes256gcm",
+    "aes-256-gcm"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -14,8 +22,8 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs lint",
-    "test": "yarn workspace kanziwjs test",
+    "lint": "yarn workspace kanziwjs eslint packages/cipher",
+    "test": "yarn workspace kanziwjs test packages/cipher",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
@@ -26,5 +34,6 @@
     "jest": "^28.0.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
-  }
+  },
+  "license": "MIT"
 }

@@ -1,12 +1,18 @@
 {
   "name": "eslint-config-kanziw",
   "description": "JavaScript Kanziw's Style - ESLint Shareable Config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/eslint-config-kanziw"
   },
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/eslint-config-kanziw#readme",
+  "keywords": [
+    "eslint",
+    "standard",
+    "kanziw"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -14,6 +20,7 @@
   "main": "index.js",
   "packageManager": "yarn@3.2.0",
   "scripts": {
+    "lint": "yarn workspace kanziwjs eslint packages/eslint-config-kanziw",
     "publish": "yarn npm publish --access public"
   },
   "devDependencies": {
@@ -34,5 +41,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-promise": "^6.0.0"
-  }
+  },
+  "license": "MIT"
 }

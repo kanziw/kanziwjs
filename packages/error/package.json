@@ -1,11 +1,17 @@
 {
   "name": "@kanziw/error",
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "description": "A collection of utility libraries about error",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/error"
   },
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/error#readme",
+  "keywords": [
+    "error",
+    "kanziw"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -15,11 +21,13 @@
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "clean": "rimraf lib",
+    "lint": "yarn workspace kanziwjs eslint packages/error",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn npm publish --access public"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
-  }
+  },
+  "license": "MIT"
 }

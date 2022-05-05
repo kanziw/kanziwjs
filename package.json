@@ -14,7 +14,7 @@
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "build": "yarn workspaces foreach --topological-dev --parallel run build",
-    "lint": "eslint packages",
+    "lint": "eslint .",
     "test": "jest"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
-  }
+  },
+  "license": "MIT"
 }
