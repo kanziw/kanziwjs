@@ -4,6 +4,7 @@
     "noEmit": true
   },
   "include": [
+    "scripts/**/*",
     ".eslintrc.js",
     "babel.config.js",
     "jest.config.js",

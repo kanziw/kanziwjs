@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-kanziw",
   "description": "JavaScript Kanziw's Style - ESLint Shareable Config",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
@@ -21,7 +21,7 @@
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "lint": "yarn workspace kanziwjs eslint packages/eslint-config-kanziw",
-    "publish": "yarn npm publish --access public"
+    "publish": "yarn publish-if-not-published"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.1",
@@ -31,7 +31,8 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.1.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "publish-if-not-published": "^3.1.2"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.20.0",
