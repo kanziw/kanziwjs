@@ -3493,6 +3493,7 @@ __metadata:
     eslint-plugin-import: ^2.26.0
     eslint-plugin-n: ^15.1.0
     eslint-plugin-promise: ^6.0.0
+    eslint-plugin-simple-import-sort: ^7.0.0
     publish-if-not-published: ^3.1.2
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^5.20.0
@@ -3502,6 +3503,7 @@ __metadata:
     eslint-plugin-import: ^2.26.0
     eslint-plugin-n: ^15.1.0
     eslint-plugin-promise: ^6.0.0
+    eslint-plugin-simple-import-sort: ^7.0.0
   languageName: unknown
   linkType: soft
 
@@ -3596,6 +3598,15 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
   checksum: 7e761507c51267b77e4ad710e7c8938aa4f8f69b975886034e57497a1816e9527eda364e25aac03d1b4e0df2e738ba98e49ad075d028824fcfea533a1419751c
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:7.0.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 6aacb7179c213cd2081950630368d1f3b1dcb4f5674d8b989fe7839e7b317ee521d74761676e8b1a7cab49f20405dbcc9aac05358ae804e6bcba6cbf1daccb3d
   languageName: node
   linkType: hard
 
@@ -5671,6 +5682,7 @@ __metadata:
     eslint-plugin-import: ^2.26.0
     eslint-plugin-n: ^15.1.0
     eslint-plugin-promise: ^6.0.0
+    eslint-plugin-simple-import-sort: ^7.0.0
     husky: ^7.0.4
     jest: ^27.5.1
     ts-node: ^10.7.0
