@@ -1,11 +1,14 @@
 {
   "name": "@kanziw/error",
   "version": "0.0.4",
+  "description": "A collection of utility libraries about error",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/error"
   },
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/error#readme",
+  "keywords": ["error", "kanziw"],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -21,5 +24,6 @@
   "devDependencies": {
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
-  }
+  },
+  "license" : "MIT"
 }

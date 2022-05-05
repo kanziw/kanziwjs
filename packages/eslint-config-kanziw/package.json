@@ -7,6 +7,8 @@
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/eslint-config-kanziw"
   },
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/eslint-config-kanziw#readme",
+  "keywords": ["eslint", "standard", "kanziw"],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -34,5 +36,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-promise": "^6.0.0"
-  }
+  },
+  "license" : "MIT"
 }
