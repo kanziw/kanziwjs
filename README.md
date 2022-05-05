@@ -2,7 +2,7 @@
 
 A collection of utility libraries used by other Kanziw JS/TS projects.
 
-![CI](https://github.com/kanziw/kanziwjs/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/kanziw/kanziwjs/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/kanziw/kanziwjs/branch/main/graph/badge.svg?token=EJ3FCXGP4F)](https://codecov.io/gh/kanziw/kanziwjs)
 
 
 ## Packages
