@@ -1,5 +1,7 @@
 on:
-  - push
+  push:
+    branches:
+      - main
 
 name: Publish
 
@@ -16,12 +18,6 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Publish packages (Dry Run)
-        if: github.ref != 'refs/heads/main'
-        run: |
-          yarn publish -- --dry-run
-
       - name: Publish packages
-        if: github.ref == 'refs/heads/main'
         run: |
           yarn publish
