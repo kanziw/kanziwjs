@@ -35,3 +35,15 @@ jobs:
       - uses: codecov/codecov-action@v2
         with:
           verbose: true
+
+  check-is-publishable-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Check is publishable versions
+        run: |
+          yarn ts-node scripts/checkIsPublishableVersions.ts

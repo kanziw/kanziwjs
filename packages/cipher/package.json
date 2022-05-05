@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/cipher",
-  "version": "0.0.4",
+  "version": "0.0.4-beta",
   "description": "Encrypt and decrypt between string and string",
   "repository": {
     "type": "git",
