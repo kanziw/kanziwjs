@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/time",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A collection of utility libraries about time",
   "repository": {
     "type": "git",
