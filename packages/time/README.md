@@ -32,6 +32,10 @@ console.log(elapsedMs) // 100.74062514305115
 
 ## timezone
 
+### time formatter
+
+Format date to string with date, time and datetime format
+
 ```ts
 import { formatWithTimezoneOffset, kstFormat, utcFormat } from '../timezone'
 

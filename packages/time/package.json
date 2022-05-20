@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/time",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A collection of utility libraries about time",
   "repository": {
     "type": "git",
@@ -13,7 +13,9 @@
     "kanziw",
     "delay",
     "cancellable delay",
-    "stopwatch"
+    "stopwatch",
+    "timezone",
+    "timezone format"
   ],
   "author": {
     "name": "Jiwoong Jung",
