@@ -1,5 +1,9 @@
 # @kanziw/time
 
+[![npm version](https://img.shields.io/npm/v/@kanziw/time)](https://www.npmjs.com/package/@kanziw/time)
+[![license](https://img.shields.io/npm/l/@kanziw/time)](https://www.npmjs.com/package/@kanziw/time)
+[![npm downloads](https://img.shields.io/npm/dt/@kanziw/time)](https://www.npmjs.com/package/@kanziw/time)
+
 ## cancellableDelay
 
 ```ts
@@ -31,6 +35,10 @@ console.log(elapsedMs) // 100.74062514305115
 ```
 
 ## timezone
+
+### time formatter
+
+Format date to string with date, time and datetime format
 
 ```ts
 import { formatWithTimezoneOffset, kstFormat, utcFormat } from '../timezone'
