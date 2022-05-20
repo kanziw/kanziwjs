@@ -1,5 +1,9 @@
 # @kanziw/time
 
+![npm version](https://img.shields.io/npm/v/@kanziw/time)
+![license](https://img.shields.io/npm/l/@kanziw/time)
+![npm downloads](https://img.shields.io/npm/dt/@kanziw/time)
+
 ## cancellableDelay
 
 ```ts

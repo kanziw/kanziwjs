@@ -1,9 +1,10 @@
 # kanziwjs
 
+![CI](https://github.com/kanziw/kanziwjs/actions/workflows/ci.yml/badge.svg)[![codecov](https://codecov.io/gh/kanziw/kanziwjs/branch/main/graph/badge.svg?token=EJ3FCXGP4F)](https://codecov.io/gh/kanziw/kanziwjs)
+![contributors](https://img.shields.io/github/contributors/kanziw/kanziwjs)
+![last commit](https://img.shields.io/github/last-commit/kanziw/kanziwjs)
+
 A collection of utility libraries used by other Kanziw JS/TS projects.
-
-![CI](https://github.com/kanziw/kanziwjs/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/kanziw/kanziwjs/branch/main/graph/badge.svg?token=EJ3FCXGP4F)](https://codecov.io/gh/kanziw/kanziwjs)
-
 
 ## Packages
 - [cipher](./packages/cipher): [@kanziw/cipher](https://www.npmjs.com/package/@kanziw/cipher)

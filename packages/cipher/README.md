@@ -1,5 +1,9 @@
 # @kanziw/cipher
 
+![npm version](https://img.shields.io/npm/v/@kanziw/cipher)
+![license](https://img.shields.io/npm/l/@kanziw/cipher)
+![npm downloads](https://img.shields.io/npm/dt/@kanziw/cipher)
+
 ## Install
 
 ```zsh
