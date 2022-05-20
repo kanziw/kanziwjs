@@ -1,8 +1,8 @@
 # eslint-config-kanziw
 
-![npm version](https://img.shields.io/npm/v/eslint-config-kanziw)
-![license](https://img.shields.io/npm/l/eslint-config-kanziw)
-![npm downloads](https://img.shields.io/npm/dt/eslint-config-kanziw)
+[![npm version](https://img.shields.io/npm/v/eslint-config-kanziw)](https://www.npmjs.com/package/eslint-config-kanziw)
+[![license](https://img.shields.io/npm/l/eslint-config-kanziw)](https://www.npmjs.com/package/eslint-config-kanziw)
+[![npm downloads](https://img.shields.io/npm/dt/eslint-config-kanziw)](https://www.npmjs.com/package/eslint-config-kanziw)
 
 kanziw's eslint rules based on [standard](https://github.com/standard/eslint-config-standard)
 
