@@ -29,3 +29,26 @@ await delay(100)
 const elapsedMs = stopwatch.end()
 console.log(elapsedMs) // 100.74062514305115
 ```
+
+## timezone
+
+```ts
+import { formatWithTimezoneOffset, kstFormat, utcFormat } from '../timezone'
+
+const d = new Date('2022-05-16T00:00:00.000Z')
+const dMs = d.getTime()
+
+const timeFormatter = formatWithTimezoneOffset('+17:30')(d) // or formatWithTimezoneOffset('+17:30')(d)
+console.log(`${timeFormatter.date()} / ${timeFormatter.time()} / ${timeFormatter.datetime()}`)
+// 2022-05-16 / 17:30:00 / 2022-05-16 17:30:00
+
+// utcFormat equals formatWithTimezoneOffset('+00:00')
+const utc = utcFormat(d) // or utcFormat(dMs)
+console.log(`${utc.date()} / ${utc.time()} / ${utc.datetime()}`)
+// 2022-05-16 / 00:00:00 / 2022-05-16 00:00:00
+
+// kstFormat equals formatWithTimezoneOffset('+09:00')
+const kst = kstFormat(d) // or kstFormat(dMs)
+console.log(`${kst.date()} / ${kst.time()} / ${kst.datetime()}`)
+// 2022-05-16 / 09:00:00 / 2022-05-16 09:00:00
+```
