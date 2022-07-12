@@ -23,7 +23,7 @@ export const formatWithTimezoneOffset = (offset: Offset): (input: Date | number)
 
     return {
       date(): string {
-        return `${d.getUTCFullYear()}-${padLeft(d.getUTCMonth() + 1, 2)}-${d.getUTCDate()}`
+        return `${d.getUTCFullYear()}-${padLeft(d.getUTCMonth() + 1, 2)}-${padLeft(d.getUTCDate(), 2)}`
       },
       time(): string {
         return `${padLeft(d.getUTCHours(), 2)}:${padLeft(d.getUTCMinutes(), 2)}:${padLeft(d.getUTCSeconds(), 2)}`

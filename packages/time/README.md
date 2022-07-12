@@ -41,7 +41,7 @@ console.log(elapsedMs) // 100.74062514305115
 Format date to string with date, time and datetime format
 
 ```ts
-import { formatWithTimezoneOffset, kstFormat, utcFormat } from '../timezone'
+import { formatWithTimezoneOffset, kstFormat, utcFormat } from '@kanziw/time'
 
 const d = new Date('2022-05-16T00:00:00.000Z')
 const dMs = d.getTime()
