@@ -39,6 +39,7 @@ describe('timezone', () => {
       ['2022-05-16T15:00:00.000Z', '2022-05-17', '00:00:00'],
       ['2022-05-16T20:31:13.874Z', '2022-05-17', '05:31:13'],
       ['2022-05-16T23:59:59.999Z', '2022-05-17', '08:59:59'],
+      ['2022-01-01T00:00:00.000Z', '2022-01-01', '09:00:00'],
     ])('kstFormat(%s)', (dateStr, expectedDate, expectedTime) => {
       testWithDateAndMs(new Date(dateStr), kstFormat, expectedDate, expectedTime)
     })
