@@ -1,17 +1,16 @@
 {
-  "name": "@kanziw/auth",
-  "version": "0.1.0",
+  "name": "@kanziw/crypto",
+  "version": "0.0.1",
   "description": "Authc & Authz Helper",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
-    "directory": "packages/auth"
+    "directory": "packages/crypto"
   },
-  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/auth#readme",
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/crypto#readme",
   "keywords": [
-    "auth",
-    "authentication",
-    "authorization"
+    "crypto",
+    "sha256"
   ],
   "author": {
     "name": "Jiwoong Jung",
@@ -21,8 +20,8 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs eslint packages/auth",
-    "test": "yarn workspace kanziwjs test packages/auth",
+    "lint": "yarn workspace kanziwjs eslint packages/crypto",
+    "test": "yarn workspace kanziwjs test packages/crypto",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn publish-if-not-published"
