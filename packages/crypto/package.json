@@ -1,11 +1,14 @@
 {
   "name": "@kanziw/crypto",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Authc & Authz Helper",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/crypto"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/crypto#readme",
   "keywords": [
