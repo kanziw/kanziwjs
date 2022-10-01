@@ -1,20 +1,20 @@
 {
-  "name": "@kanziw/date",
-  "version": "0.1.1",
-  "description": "A collection of utility libraries about date",
+  "name": "@kanziw/promise",
+  "version": "0.1.0",
+  "description": "A collection of utility libraries about promise",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
-    "directory": "packages/date"
+    "directory": "packages/promise"
   },
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/date#readme",
+  "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/promise#readme",
   "keywords": [
-    "date",
+    "promise",
     "kanziw",
-    "isValidDate"
+    "defer"
   ],
   "author": {
     "name": "Jiwoong Jung",
@@ -24,8 +24,8 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs eslint packages/date",
-    "test": "yarn workspace kanziwjs test packages/date",
+    "lint": "yarn workspace kanziwjs eslint packages/promise",
+    "test": "yarn workspace kanziwjs test packages/promise",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn publish-if-not-published"
