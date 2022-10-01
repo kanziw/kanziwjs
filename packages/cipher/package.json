@@ -7,6 +7,9 @@
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/cipher"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/cipher#readme",
   "keywords": [
     "cipher",

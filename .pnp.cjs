@@ -33,6 +33,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/crypto"\
       },\
       {\
+        "name": "@kanziw/date",\
+        "reference": "workspace:packages/date"\
+      },\
+      {\
         "name": "@kanziw/error",\
         "reference": "workspace:packages/error"\
       },\
@@ -51,6 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@kanziw/auth", ["workspace:packages/auth"]],\
       ["@kanziw/cipher", ["workspace:packages/cipher"]],\
       ["@kanziw/crypto", ["workspace:packages/crypto"]],\
+      ["@kanziw/date", ["workspace:packages/date"]],\
       ["@kanziw/error", ["workspace:packages/error"]],\
       ["@kanziw/time", ["workspace:packages/time"]],\
       ["eslint-config-kanziw", ["virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#workspace:packages/eslint-config-kanziw", "workspace:packages/eslint-config-kanziw"]],\
@@ -3559,6 +3564,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.5.0"],\
             ["@types/node", "npm:17.0.25"],\
             ["jest", "virtual:8effb510648c92652647c33188c0dc245e57c65c6602f7a2a30f5ab3bd1b346c05a9f4a1f7cecf50b7e118ba7a677842dadf14656e23a061e992df6e233ddbfa#npm:28.0.3"],\
+            ["publish-if-not-published", "npm:3.1.2"],\
+            ["rimraf", "npm:3.0.2"],\
+            ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@kanziw/date", [\
+        ["workspace:packages/date", {\
+          "packageLocation": "./packages/date/",\
+          "packageDependencies": [\
+            ["@kanziw/date", "workspace:packages/date"],\
+            ["@types/jest", "npm:27.5.0"],\
+            ["@types/node", "npm:17.0.25"],\
             ["publish-if-not-published", "npm:3.1.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"]\
