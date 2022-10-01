@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/error",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of utility libraries about error",
   "repository": {
     "type": "git",
@@ -29,9 +29,9 @@
     "publish": "yarn build && yarn publish-if-not-published"
   },
   "devDependencies": {
-    "publish-if-not-published": "^3.1.2",
+    "publish-if-not-published": "^3.1.3",
     "rimraf": "^3.0.2",
-    "typescript": "^4.6.3"
+    "typescript": "^4.8.4"
   },
   "license": "MIT"
 }
