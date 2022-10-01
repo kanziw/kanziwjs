@@ -2010,6 +2010,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@kanziw/stream@workspace:packages/stream":
+  version: 0.0.0-use.local
+  resolution: "@kanziw/stream@workspace:packages/stream"
+  dependencies:
+    "@types/node": ^17.0.25
+    publish-if-not-published: ^3.1.2
+    rimraf: ^3.0.2
+    typescript: ^4.6.3
+  languageName: unknown
+  linkType: soft
+
 "@kanziw/time@workspace:packages/time":
   version: 0.0.0-use.local
   resolution: "@kanziw/time@workspace:packages/time"
