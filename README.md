@@ -8,7 +8,12 @@
 A collection of utility libraries used by other Kanziw JS/TS projects.
 
 ## Packages
+- [auth](./packages/auth): [@kanziw/auth](https://www.npmjs.com/package/@kanziw/auth)
 - [cipher](./packages/cipher): [@kanziw/cipher](https://www.npmjs.com/package/@kanziw/cipher)
+- [crypto](./packages/crypto): [@kanziw/crypto](https://www.npmjs.com/package/@kanziw/crypto)
+- [date](./packages/date): [@kanziw/date](https://www.npmjs.com/package/@kanziw/date)
 - [error](./packages/error): [@kanziw/error](https://www.npmjs.com/package/@kanziw/error)
 - [eslint-config-kanziw](./packages/eslint-config-kanziw): [@kanziw/eslint-config-kanziw](https://www.npmjs.com/package/eslint-config-kanziw)
+- [promise](./packages/promise): [@kanziw/promise](https://www.npmjs.com/package/@kanziw/promise)
+- [stream](./packages/stream): [@kanziw/stream](https://www.npmjs.com/package/@kanziw/stream)
 - [time](./packages/time): [@kanziw/time](https://www.npmjs.com/package/@kanziw/time)
