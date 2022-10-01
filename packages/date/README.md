@@ -1,4 +1,4 @@
-# @kanziwdate/
+# @kanziw/date
 
 [![npm version](https://img.shields.io/npm/v/@kanziw/date)](https://www.npmjs.com/package/@kanziw/date)
 [![license](https://img.shields.io/npm/l/@kanziw/date)](https://www.npmjs.com/package/@kanziw/date)
