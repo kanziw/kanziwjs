@@ -85,14 +85,21 @@ export class EchoResponse extends Message<EchoResponse> {
  */
 export class AddRequest extends Message<AddRequest> {
   /**
-   * @generated from field: int64 int64_value = 1;
+   * @generated from oneof echo.v1.AddRequest.args
    */
-  int64Value = protoInt64.zero;
-
-  /**
-   * @generated from field: int32 int32_value = 2;
-   */
-  int32Value = 0;
+  args: {
+    /**
+     * @generated from field: echo.v1.AddRequest.Int32Args int32_args = 1;
+     */
+    value: AddRequest_Int32Args;
+    case: "int32Args";
+  } | {
+    /**
+     * @generated from field: echo.v1.AddRequest.Int64Args int64_args = 2;
+     */
+    value: AddRequest_Int64Args;
+    case: "int64Args";
+  } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AddRequest>) {
     super();
@@ -102,8 +109,8 @@ export class AddRequest extends Message<AddRequest> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "echo.v1.AddRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "int64_value", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
-    { no: 2, name: "int32_value", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 1, name: "int32_args", kind: "message", T: AddRequest_Int32Args, oneof: "args" },
+    { no: 2, name: "int64_args", kind: "message", T: AddRequest_Int64Args, oneof: "args" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddRequest {
@@ -124,13 +131,111 @@ export class AddRequest extends Message<AddRequest> {
 }
 
 /**
+ * @generated from message echo.v1.AddRequest.Int32Args
+ */
+export class AddRequest_Int32Args extends Message<AddRequest_Int32Args> {
+  /**
+   * @generated from field: int32 first = 1;
+   */
+  first = 0;
+
+  /**
+   * @generated from field: int32 second = 2;
+   */
+  second = 0;
+
+  constructor(data?: PartialMessage<AddRequest_Int32Args>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.AddRequest.Int32Args";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "first", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 2, name: "second", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddRequest_Int32Args {
+    return new AddRequest_Int32Args().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AddRequest_Int32Args {
+    return new AddRequest_Int32Args().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddRequest_Int32Args {
+    return new AddRequest_Int32Args().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AddRequest_Int32Args | PlainMessage<AddRequest_Int32Args> | undefined, b: AddRequest_Int32Args | PlainMessage<AddRequest_Int32Args> | undefined): boolean {
+    return proto3.util.equals(AddRequest_Int32Args, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.AddRequest.Int64Args
+ */
+export class AddRequest_Int64Args extends Message<AddRequest_Int64Args> {
+  /**
+   * @generated from field: int64 first = 1;
+   */
+  first = protoInt64.zero;
+
+  /**
+   * @generated from field: int64 second = 2;
+   */
+  second = protoInt64.zero;
+
+  constructor(data?: PartialMessage<AddRequest_Int64Args>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.AddRequest.Int64Args";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "first", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 2, name: "second", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddRequest_Int64Args {
+    return new AddRequest_Int64Args().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AddRequest_Int64Args {
+    return new AddRequest_Int64Args().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AddRequest_Int64Args {
+    return new AddRequest_Int64Args().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AddRequest_Int64Args | PlainMessage<AddRequest_Int64Args> | undefined, b: AddRequest_Int64Args | PlainMessage<AddRequest_Int64Args> | undefined): boolean {
+    return proto3.util.equals(AddRequest_Int64Args, a, b);
+  }
+}
+
+/**
  * @generated from message echo.v1.AddResponse
  */
 export class AddResponse extends Message<AddResponse> {
   /**
-   * @generated from field: int64 result = 1;
+   * @generated from oneof echo.v1.AddResponse.result
    */
-  result = protoInt64.zero;
+  result: {
+    /**
+     * @generated from field: int32 int32_result = 1;
+     */
+    value: number;
+    case: "int32Result";
+  } | {
+    /**
+     * @generated from field: int64 int64_result = 2;
+     */
+    value: bigint;
+    case: "int64Result";
+  } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AddResponse>) {
     super();
@@ -140,7 +245,8 @@ export class AddResponse extends Message<AddResponse> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "echo.v1.AddResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "result", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 1, name: "int32_result", kind: "scalar", T: 5 /* ScalarType.INT32 */, oneof: "result" },
+    { no: 2, name: "int64_result", kind: "scalar", T: 3 /* ScalarType.INT64 */, oneof: "result" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AddResponse {

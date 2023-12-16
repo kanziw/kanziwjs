@@ -28,10 +28,24 @@ message EchoResponse {
 }
 
 message AddRequest {
-  int64 int64_value = 1;
-  int32 int32_value = 2;
+  message Int32Args {
+    int32 first = 1;
+    int32 second = 2;
+  }
+  message Int64Args {
+    int64 first = 1;
+    int64 second = 2;
+  }
+
+  oneof args {
+    Int32Args int32_args = 1;
+    Int64Args int64_args = 2;
+  }
 }
 
 message AddResponse {
-  int64 result = 1;
+  oneof result {
+    int32 int32_result = 1;
+    int64 int64_result = 2;
+  }
 }
