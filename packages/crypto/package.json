@@ -11,10 +11,7 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/crypto#readme",
-  "keywords": [
-    "crypto",
-    "sha256"
-  ],
+  "keywords": ["crypto", "sha256"],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -23,7 +20,6 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs eslint packages/crypto",
     "test": "yarn workspace kanziwjs test packages/crypto",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",

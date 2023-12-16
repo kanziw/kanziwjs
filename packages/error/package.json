@@ -11,10 +11,7 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/error#readme",
-  "keywords": [
-    "error",
-    "kanziw"
-  ],
+  "keywords": ["error", "kanziw"],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -24,7 +21,6 @@
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "clean": "rimraf lib",
-    "lint": "yarn workspace kanziwjs eslint packages/error",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn publish-if-not-published"
   },
