@@ -12,11 +12,16 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.14.2
+          node-version-file: '.tool-versions'
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
 
       - name: Publish packages
         run: |

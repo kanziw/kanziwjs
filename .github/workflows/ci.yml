@@ -7,14 +7,19 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.14.2
+          node-version-file: '.tool-versions'
 
-      - name: Lint
+      - name: Yarn install
         run: |
-          yarn lint
+          yarn install --immutable --immutable-cache
+        shell: bash
+
+      - name: Run Biome
+        run: |
+          yarn biome ci .
 
       - name: Build for type check
         run: |
@@ -23,26 +28,36 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.14.2
+          node-version-file: '.tool-versions'
+
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
 
       - name: Test with coverage
         run: |
           yarn test --coverage
 
-      - uses: codecov/codecov-action@v2
+      - uses: codecov/codecov-action@v3
         with:
           verbose: true
 
   check-is-publishable-versions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.14.2
+          node-version-file: '.tool-versions'
+
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
 
       - name: Check is publishable versions
         run: |

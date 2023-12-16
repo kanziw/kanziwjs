@@ -3,7 +3,7 @@ import { setTimeout as delay } from 'timers/promises'
 import { startStopwatch } from '../stopwatch'
 
 describe('startStopwatch', () => {
-  test('end', async() => {
+  test('end', async () => {
     const stopwatch = startStopwatch()
     await delay(100)
 

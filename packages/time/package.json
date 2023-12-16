@@ -11,15 +11,7 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/time#readme",
-  "keywords": [
-    "time",
-    "kanziw",
-    "delay",
-    "cancellable delay",
-    "stopwatch",
-    "timezone",
-    "timezone format"
-  ],
+  "keywords": ["time", "kanziw", "delay", "cancellable delay", "stopwatch", "timezone", "timezone format"],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
@@ -28,18 +20,17 @@
   "types": "./lib/index.d.ts",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "lint": "yarn workspace kanziwjs eslint packages/time",
     "test": "yarn workspace kanziwjs test packages/time",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn tsc",
     "publish": "yarn build && yarn publish-if-not-published"
   },
   "devDependencies": {
-    "@types/jest": "^27.5.0",
-    "@types/node": "^17.0.25",
-    "publish-if-not-published": "^3.1.2",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.3"
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.4",
+    "publish-if-not-published": "^3.1.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
   },
   "license": "MIT"
 }

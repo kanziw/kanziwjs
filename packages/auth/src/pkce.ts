@@ -4,19 +4,14 @@
 import crypto from 'crypto'
 
 interface PKCE {
-  codeChallengeMethod: 'S256';
+  codeChallengeMethod: 'S256'
 
-  newCodeVerifier(option?: { byteLength?: number }): string;
-  hash(codeVerifier: string): string;
-  verify(codeVerifier: string, codeChallenge: string): boolean;
+  newCodeVerifier(option?: { byteLength?: number }): string
+  hash(codeVerifier: string): string
+  verify(codeVerifier: string, codeChallenge: string): boolean
 }
 
-const base64Encode = (buf: Buffer) => (
-  buf.toString('base64')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=/g, '')
-)
+const base64Encode = (buf: Buffer) => buf.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '')
 
 const sha256 = (str: string) => crypto.createHash('sha256').update(str).digest()
 

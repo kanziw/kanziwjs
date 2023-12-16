@@ -3,7 +3,7 @@ import { setTimeout as delay } from 'timers/promises'
 import { defer } from '../defer'
 
 describe('defer', () => {
-  it('success w/ resolve', async() => {
+  it('success w/ resolve', async () => {
     const { deferWait, checkDeferWaitStatus } = deferTester()
 
     const beforeResolveResult = await checkDeferWaitStatus()
@@ -14,7 +14,7 @@ describe('defer', () => {
     expect(afterResolveResult).toEqual('resolved')
   })
 
-  it('success w/ reject', async() => {
+  it('success w/ reject', async () => {
     const { deferWait, checkDeferWaitStatus } = deferTester()
 
     const beforeRejectResult = await checkDeferWaitStatus()
@@ -28,14 +28,8 @@ describe('defer', () => {
 
 function deferTester() {
   const deferWait = defer()
-  const checkDeferWaitStatus = async() => (
-    Promise.race([
-      delay(10).then(() => 'pending'),
-      deferWait.promise
-        .then(() => 'resolved')
-        .catch(() => 'rejected'),
-    ])
-  )
+  const checkDeferWaitStatus = async () =>
+    Promise.race([delay(10).then(() => 'pending'), deferWait.promise.then(() => 'resolved').catch(() => 'rejected')])
 
   return {
     deferWait,

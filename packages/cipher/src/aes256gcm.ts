@@ -11,10 +11,7 @@ const NON_ENCRYPTED_TEXT_LENGTH = INITIALIZATION_VECTOR_LENGTH + AUTH_TAG_LENGTH
 const generateRandomIv = (): Buffer => crypto.randomBytes(INITIALIZATION_VECTOR_LENGTH)
 export const generateFixedNounce = (): Buffer => generateRandomIv()
 
-export const aes256gcm = (
-  cipherKey: Buffer,
-  { fixedNounce = null }: { fixedNounce?: Buffer | null } = {},
-): Cipher => {
+export const aes256gcm = (cipherKey: Buffer, { fixedNounce = null }: { fixedNounce?: Buffer | null } = {}): Cipher => {
   if (fixedNounce) {
     assert(
       fixedNounce.length === INITIALIZATION_VECTOR_LENGTH,
@@ -28,12 +25,7 @@ export const aes256gcm = (
       authTagLength: AUTH_TAG_LENGTH,
     })
 
-    return Buffer.concat([
-      cipher.update(plainText, 'utf8'),
-      cipher.final(),
-      iv,
-      cipher.getAuthTag(),
-    ]).toString('base64')
+    return Buffer.concat([cipher.update(plainText, 'utf8'), cipher.final(), iv, cipher.getAuthTag()]).toString('base64')
   }
 
   const decrypt = (encryptedText: string) => {

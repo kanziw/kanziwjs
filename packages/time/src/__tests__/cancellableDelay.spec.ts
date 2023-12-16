@@ -2,7 +2,7 @@ import { cancellableDelay } from '../cancellableDelay'
 import { startStopwatch } from '../stopwatch'
 
 describe('cancellableDelay', () => {
-  test('delay', async() => {
+  test('delay', async () => {
     const stopwatch = startStopwatch()
     const foo = await cancellableDelay(100, 'foo').promise
 
@@ -10,15 +10,12 @@ describe('cancellableDelay', () => {
     expect(stopwatch.end()).toBeGreaterThanOrEqual(90)
   })
 
-  test('cancel', async() => {
+  test('cancel', async () => {
     const delay100 = cancellableDelay(100)
     const delay1000 = cancellableDelay(1000)
 
     const stopwatch = startStopwatch()
-    await Promise.all([
-      delay100.promise.finally(delay1000.cancel),
-      delay1000.promise,
-    ])
+    await Promise.all([delay100.promise.finally(delay1000.cancel), delay1000.promise])
 
     expect(stopwatch.end()).toBeLessThan(500)
   })

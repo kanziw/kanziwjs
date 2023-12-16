@@ -1,4 +1,4 @@
-# eslint-config-kanziw
+# eslint-config-kanziw `DEPRECATED`
 
 kanziw's eslint rules based on [standard](https://github.com/standard/eslint-config-standard)
 
