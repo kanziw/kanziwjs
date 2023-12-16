@@ -11,14 +11,18 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/cipher#readme",
-  "keywords": ["cipher", "kanziw", "aes256gcm", "aes-256-gcm"],
+  "keywords": [
+    "cipher",
+    "kanziw",
+    "aes256gcm",
+    "aes-256-gcm"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "packageManager": "yarn@3.2.0",
   "scripts": {
     "test": "yarn workspace kanziwjs test packages/cipher",
     "clean": "rimraf lib",

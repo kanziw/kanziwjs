@@ -11,14 +11,17 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/date#readme",
-  "keywords": ["date", "kanziw", "isValidDate"],
+  "keywords": [
+    "date",
+    "kanziw",
+    "isValidDate"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "packageManager": "yarn@3.2.0",
   "scripts": {
     "test": "yarn workspace kanziwjs test packages/date",
     "clean": "rimraf lib",

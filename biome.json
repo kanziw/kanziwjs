@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
   "files": {
-    "ignore": [".yarn/", "lib/", "coverage/"]
+    "ignore": ["node_modules/", ".yarn/", "lib/", "coverage/", "package.json", "packages/grpc-es/example/gen/"]
   },
   "organizeImports": {
     "enabled": true
@@ -10,7 +10,8 @@
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 120
+    "lineWidth": 120,
+    "formatWithErrors": true
   },
   "linter": {
     "enabled": true,
