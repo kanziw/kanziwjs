@@ -8,14 +8,15 @@
 
 ```typescript
 import { GrpcEsServer, stdoutUnaryServerInterceptor } from '@kanziw/grpc-es/server'
-import { EchoService } from './gen/echo/v1/echo_connect'
+import { ExampleService } from './gen/example/v1/example_connect'
 
 const PORT = 8080
 
-new GrpcEsServer({ jsonOptions: { useProtoFieldName: true, ignoreUnknownFields: true } })
+new GrpcEsServer({ jsonOptions: { useProtoFieldName: true } })
   .use(stdoutUnaryServerInterceptor())
-  .register(EchoService, {
+  .register(ExampleService, {
     echo: (req) => ({ message: `you said: ${req.message}` }),
+    add: (req) => ({ result: req.int64Value + BigInt(req.int32Value) }),
   })
   .listenAndServe(PORT)
 
