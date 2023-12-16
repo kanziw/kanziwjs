@@ -29,9 +29,9 @@
     "publish": "yarn build && yarn publish-if-not-published"
   },
   "devDependencies": {
-    "publish-if-not-published": "^3.1.2",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.3"
+    "publish-if-not-published": "^3.1.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
   },
   "license": "MIT"
 }
