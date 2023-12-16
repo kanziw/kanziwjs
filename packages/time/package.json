@@ -26,7 +26,6 @@
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "packageManager": "yarn@3.2.0",
   "scripts": {
     "test": "yarn workspace kanziwjs test packages/time",
     "clean": "rimraf lib",
