@@ -1,6 +1,6 @@
 import { Code, ConnectError } from '@connectrpc/connect'
 import { performance } from 'perf_hooks'
-import type { Interceptor } from './types'
+import type { Interceptor } from './types.js'
 
 export const stdoutUnaryServerInterceptor = (): Interceptor => async (req, ctx, next) => {
   const [startsAt, before] = [new Date(), performance.now()]

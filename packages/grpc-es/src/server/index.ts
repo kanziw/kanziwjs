@@ -1,3 +1,3 @@
-export { stdoutUnaryServerInterceptor } from './interceptor'
-export { GrpcEsServer } from './server'
-export { Interceptor, Handler } from './types'
+export { stdoutUnaryServerInterceptor } from './interceptor.js'
+export { GrpcEsServer } from './server.js'
+export type { Handler, Interceptor } from './types.js'

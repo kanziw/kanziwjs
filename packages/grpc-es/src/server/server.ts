@@ -2,7 +2,7 @@ import * as http2 from 'node:http2'
 import type { AnyMessage, ServiceType } from '@bufbuild/protobuf'
 import type { HandlerContext, ServiceImpl } from '@connectrpc/connect'
 import { connectNodeAdapter } from '@connectrpc/connect-node'
-import type { Handler, Interceptor } from './types'
+import type { Handler, Interceptor } from './types.js'
 
 export class GrpcEsServer {
   private interceptors: Interceptor[] = []
