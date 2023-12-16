@@ -5,9 +5,9 @@ const packagePaths = walkSync('packages', { globs: ['*/package.json'], includeBa
 
 const isPublishableVersion = (version: string) => /^\d\.\d\.\d$/.test(version)
 
-Promise.all(packagePaths.map(packagePath => (
-  import(resolve(packagePath)).then(({ name, version }) => [name, version])
-))).then(packageInfos => {
+Promise.all(
+  packagePaths.map((packagePath) => import(resolve(packagePath)).then(({ name, version }) => [name, version])),
+).then((packageInfos) => {
   if (packageInfos.some(([, version]) => !isPublishableVersion(version))) {
     packageInfos
       .filter(([, version]) => !isPublishableVersion(version))
@@ -17,8 +17,7 @@ Promise.all(packagePaths.map(packagePath => (
     process.exit(1)
   }
 
-  packageInfos
-    .forEach(([name, version]) => {
-      console.error(`${name}@${version} is a publishable version`)
-    })
+  packageInfos.forEach(([name, version]) => {
+    console.error(`${name}@${version} is a publishable version`)
+  })
 })

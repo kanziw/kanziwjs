@@ -74,6 +74,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.6"],\
           ["@babel/preset-env", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:7.23.6"],\
           ["@babel/preset-typescript", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:7.23.3"],\
+          ["@biomejs/biome", "npm:1.4.1"],\
           ["@types/jest", "npm:29.5.11"],\
           ["@types/node", "npm:20.10.4"],\
           ["@typescript-eslint/eslint-plugin", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:5.62.0"],\
@@ -85,7 +86,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-n", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:15.7.0"],\
           ["eslint-plugin-promise", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:6.1.1"],\
           ["eslint-plugin-simple-import-sort", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:7.0.0"],\
-          ["husky", "npm:7.0.4"],\
           ["jest", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:29.7.0"],\
           ["ts-node", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -3369,6 +3369,75 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@bcoe-v8-coverage-npm-0.2.3-9e27b3c57e-1a1f0e356a.zip/node_modules/@bcoe/v8-coverage/",\
         "packageDependencies": [\
           ["@bcoe/v8-coverage", "npm:0.2.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/biome", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-biome-npm-1.4.1-908a13650b/node_modules/@biomejs/biome/",\
+        "packageDependencies": [\
+          ["@biomejs/biome", "npm:1.4.1"],\
+          ["@biomejs/cli-darwin-arm64", "npm:1.4.1"],\
+          ["@biomejs/cli-darwin-x64", "npm:1.4.1"],\
+          ["@biomejs/cli-linux-arm64", "npm:1.4.1"],\
+          ["@biomejs/cli-linux-x64", "npm:1.4.1"],\
+          ["@biomejs/cli-win32-arm64", "npm:1.4.1"],\
+          ["@biomejs/cli-win32-x64", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/cli-darwin-arm64", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-cli-darwin-arm64-npm-1.4.1-212e448754/node_modules/@biomejs/cli-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@biomejs/cli-darwin-arm64", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/cli-darwin-x64", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-cli-darwin-x64-npm-1.4.1-82a649f050/node_modules/@biomejs/cli-darwin-x64/",\
+        "packageDependencies": [\
+          ["@biomejs/cli-darwin-x64", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/cli-linux-arm64", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-cli-linux-arm64-npm-1.4.1-b36d609574/node_modules/@biomejs/cli-linux-arm64/",\
+        "packageDependencies": [\
+          ["@biomejs/cli-linux-arm64", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/cli-linux-x64", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-cli-linux-x64-npm-1.4.1-5d16748a6f/node_modules/@biomejs/cli-linux-x64/",\
+        "packageDependencies": [\
+          ["@biomejs/cli-linux-x64", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/cli-win32-arm64", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-cli-win32-arm64-npm-1.4.1-c4c34b05a3/node_modules/@biomejs/cli-win32-arm64/",\
+        "packageDependencies": [\
+          ["@biomejs/cli-win32-arm64", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@biomejs/cli-win32-x64", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "./.yarn/unplugged/@biomejs-cli-win32-x64-npm-1.4.1-3e7f7458bb/node_modules/@biomejs/cli-win32-x64/",\
+        "packageDependencies": [\
+          ["@biomejs/cli-win32-x64", "npm:1.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7658,15 +7727,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["husky", [\
-      ["npm:7.0.4", {\
-        "packageLocation": "./.yarn/cache/husky-npm-7.0.4-917ba035c6-8fecb619ab.zip/node_modules/husky/",\
-        "packageDependencies": [\
-          ["husky", "npm:7.0.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["iconv-lite", [\
       ["npm:0.6.3", {\
         "packageLocation": "./.yarn/cache/iconv-lite-npm-0.6.3-24b8aae27e-24e3292dd3.zip/node_modules/iconv-lite/",\
@@ -9216,6 +9276,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.23.6"],\
           ["@babel/preset-env", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:7.23.6"],\
           ["@babel/preset-typescript", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:7.23.3"],\
+          ["@biomejs/biome", "npm:1.4.1"],\
           ["@types/jest", "npm:29.5.11"],\
           ["@types/node", "npm:20.10.4"],\
           ["@typescript-eslint/eslint-plugin", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:5.62.0"],\
@@ -9227,7 +9288,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-n", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:15.7.0"],\
           ["eslint-plugin-promise", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:6.1.1"],\
           ["eslint-plugin-simple-import-sort", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:7.0.0"],\
-          ["husky", "npm:7.0.4"],\
           ["jest", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:29.7.0"],\
           ["ts-node", "virtual:54745c056a8dd9de84943fa77f1d9bdf549a03c88c9433e3bd0624778eb0ca5c4bdb670e3f6d8e5dd57e22ef971a0742c7bca4d47bba63fbfabf8f6640884de2#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\

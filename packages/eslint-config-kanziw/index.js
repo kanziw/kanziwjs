@@ -4,20 +4,13 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'standard',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'standard'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint',
-    'simple-import-sort',
-  ],
+  plugins: ['@typescript-eslint', 'simple-import-sort'],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
     'simple-import-sort/imports': 'error',

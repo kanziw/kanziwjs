@@ -2,7 +2,7 @@ import { sha256Pkce } from '../pkce'
 
 describe('PKCE', () => {
   describe('sha256', () => {
-    it('success', async() => {
+    it('success', async () => {
       const pkce = sha256Pkce()
       const codeVerifier = pkce.newCodeVerifier()
       const codeChallenge = pkce.hash(codeVerifier)
