@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/grpc-es",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "description": "A collection of grpc libraries using connect-es",
   "repository": {
     "type": "git",
@@ -24,6 +24,9 @@
     "email": "kanziwoong@gmail.com"
   },
   "type": "module",
+  "files": [
+    "lib/**/*"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -55,7 +58,7 @@
     "run:example": "tsx watch --clear-screen=false example/server.ts",
     "clean": "rimraf lib",
     "build": "yarn clean && yarn build:esm && yarn build:cjs",
-    "build:esm": "yarn tsc --noEmit false --module es2022 --outDir lib/esm",
+    "build:esm": "yarn tsc --noEmit false --module esnext --outDir lib/esm",
     "build:cjs": "yarn tsc --noEmit false --module commonjs --outDir lib/cjs",
     "publish": "yarn build && yarn publish-if-not-published"
   },
