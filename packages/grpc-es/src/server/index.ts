@@ -1,3 +1,3 @@
-export * from './interceptor'
-export * from './server'
-export * from './types'
+export { stdoutUnaryServerInterceptor } from './interceptor'
+export { GrpcEsServer } from './server'
+export { Interceptor, Handler } from './types'

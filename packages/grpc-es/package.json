@@ -1,6 +1,6 @@
 {
   "name": "@kanziw/grpc-es",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.3",
   "description": "A collection of grpc libraries using connect-es",
   "repository": {
     "type": "git",
@@ -50,8 +50,6 @@
     },
     "./package.json": "./package.json"
   },
-  "types": "./lib/esm/index.d.js",
-  "main": "./lib/cjs/index.js",
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "generate:example-stubs": "buf generate",
