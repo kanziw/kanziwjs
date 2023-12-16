@@ -34,7 +34,18 @@
         "types": "./lib/cjs/index.d.js",
         "default": "./lib/cjs/index.js"
       }
-    }
+    },
+    "./server": {
+      "import": {
+        "types": "./lib/esm/server/index.d.js",
+        "default": "./lib/esm/server/index.js"
+      },
+      "require": {
+        "types": "./lib/cjs/server/index.d.js",
+        "default": "./lib/cjs/server/index.js"
+      }
+    },
+    "./package.json": "./package.json"
   },
   "types": "./lib/esm/index.d.js",
   "main": "./lib/cjs/index.js",

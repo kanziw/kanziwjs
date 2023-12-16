@@ -1,38 +1,32 @@
 import * as http2 from 'node:http2'
 import type { AnyMessage, ServiceType } from '@bufbuild/protobuf'
-import { HandlerContext, MethodImpl, ServiceImpl } from '@connectrpc/connect'
+import type { HandlerContext, ServiceImpl } from '@connectrpc/connect'
 import { connectNodeAdapter } from '@connectrpc/connect-node'
-
-type Handler = MethodImpl<ServiceType['methods'][keyof ServiceType['methods']]>
-export type Middleware = (
-  req: AnyMessage & AsyncIterable<AnyMessage>,
-  ctx: HandlerContext,
-  next: Handler,
-) => ReturnType<Handler>
+import type { Handler, Interceptor } from './types'
 
 export class GrpcEsServer {
-  private middlewares: Middleware[] = []
+  private interceptors: Interceptor[] = []
   private services: { service: ServiceType; implementation: ServiceImpl<ServiceType> }[] = []
 
-  use(middleware: Middleware): this {
-    this.middlewares.push(middleware)
+  use(interceptor: Interceptor): this {
+    this.interceptors.push(interceptor)
     return this
   }
 
   register<Service extends ServiceType>(service: Service, implementation: ServiceImpl<Service>): this {
-    const middlewareAppliedImplementation = {} as ServiceImpl<typeof service>
+    const interceptorAppliedImplementation = {} as ServiceImpl<typeof service>
 
     for (const [key, handler] of Object.entries(implementation)) {
       let appliedHandler = handler
-      for (const middleware of this.middlewares) {
+      for (const interceptor of this.interceptors) {
         const currentHandler = appliedHandler
         appliedHandler = ((req: AnyMessage & AsyncIterable<AnyMessage>, ctx: HandlerContext) =>
-          middleware(req, ctx, currentHandler)) as Handler
+          interceptor(req, ctx, currentHandler)) as Handler
       }
-      middlewareAppliedImplementation[key as keyof ServiceImpl<typeof service>] = appliedHandler
+      interceptorAppliedImplementation[key as keyof ServiceImpl<typeof service>] = appliedHandler
     }
 
-    this.services.push({ service, implementation: middlewareAppliedImplementation })
+    this.services.push({ service, implementation: interceptorAppliedImplementation })
     return this
   }
 

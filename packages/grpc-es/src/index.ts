@@ -1,1 +1,1 @@
-export * from './server'
+export * as Server from './server'
