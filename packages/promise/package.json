@@ -11,7 +11,11 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/promise#readme",
-  "keywords": ["promise", "kanziw", "defer"],
+  "keywords": [
+    "promise",
+    "kanziw",
+    "defer"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"

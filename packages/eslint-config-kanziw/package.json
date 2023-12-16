@@ -11,7 +11,11 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/eslint-config-kanziw#readme",
-  "keywords": ["eslint", "standard", "kanziw"],
+  "keywords": [
+    "eslint",
+    "standard",
+    "kanziw"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"

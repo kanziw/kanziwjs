@@ -11,7 +11,11 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/stream#readme",
-  "keywords": ["stream", "kanziw", "drain"],
+  "keywords": [
+    "stream",
+    "kanziw",
+    "drain"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"

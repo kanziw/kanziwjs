@@ -11,7 +11,10 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/error#readme",
-  "keywords": ["error", "kanziw"],
+  "keywords": [
+    "error",
+    "kanziw"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"

@@ -11,7 +11,10 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/crypto#readme",
-  "keywords": ["crypto", "sha256"],
+  "keywords": [
+    "crypto",
+    "sha256"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"

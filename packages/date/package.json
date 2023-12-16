@@ -11,7 +11,11 @@
     "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/date#readme",
-  "keywords": ["date", "kanziw", "isValidDate"],
+  "keywords": [
+    "date",
+    "kanziw",
+    "isValidDate"
+  ],
   "author": {
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
