@@ -17,9 +17,9 @@ jobs:
           yarn install --immutable --immutable-cache
         shell: bash
 
-      - name: Lint
+      - name: Run Biome
         run: |
-          yarn lint
+          yarn biome ci .
 
       - name: Build for type check
         run: |

@@ -8,16 +8,15 @@ const isPublishableVersion = (version: string) => /^\d\.\d\.\d$/.test(version)
 Promise.all(
   packagePaths.map((packagePath) => import(resolve(packagePath)).then(({ name, version }) => [name, version])),
 ).then((packageInfos) => {
-  if (packageInfos.some(([, version]) => !isPublishableVersion(version))) {
-    packageInfos
-      .filter(([, version]) => !isPublishableVersion(version))
-      .forEach(([name, version]) => {
-        console.error(`${name}@${version} is not a publishable version`)
-      })
+  const notPublishableVersionPackageInfos = packageInfos.filter(([, version]) => !isPublishableVersion(version))
+  if (notPublishableVersionPackageInfos.length) {
+    for (const [name, version] of notPublishableVersionPackageInfos) {
+      console.error(`${name}@${version} is not a publishable version`)
+    }
     process.exit(1)
   }
 
-  packageInfos.forEach(([name, version]) => {
+  for (const [name, version] of packageInfos) {
     console.error(`${name}@${version} is a publishable version`)
-  })
+  }
 })

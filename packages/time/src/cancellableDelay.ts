@@ -1,3 +1,4 @@
+// biome-ignore lint/suspicious/noConfusingVoidType: <explanation>
 type Maybe<T> = T | void
 
 type CancellabledDelay<T> = {
