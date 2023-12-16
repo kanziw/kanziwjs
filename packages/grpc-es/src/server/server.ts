@@ -2,11 +2,14 @@ import * as http2 from 'node:http2'
 import type { AnyMessage, ServiceType } from '@bufbuild/protobuf'
 import type { HandlerContext, ServiceImpl } from '@connectrpc/connect'
 import { connectNodeAdapter } from '@connectrpc/connect-node'
+import { UniversalHandlerOptions } from '@connectrpc/connect/protocol'
 import type { Handler, Interceptor } from './types.js'
 
 export class GrpcEsServer {
   private interceptors: Interceptor[] = []
   private services: { service: ServiceType; implementation: ServiceImpl<ServiceType> }[] = []
+
+  constructor(private options?: Partial<UniversalHandlerOptions>) {}
 
   use(interceptor: Interceptor): this {
     this.interceptors.push(interceptor)
@@ -25,8 +28,8 @@ export class GrpcEsServer {
       }
       interceptorAppliedImplementation[key as keyof ServiceImpl<typeof service>] = appliedHandler
     }
-
     this.services.push({ service, implementation: interceptorAppliedImplementation })
+
     return this
   }
 
@@ -36,7 +39,7 @@ export class GrpcEsServer {
         connectNodeAdapter({
           routes: (router) => {
             for (const { service, implementation } of this.services) {
-              router.service(service, implementation)
+              router.service(service, implementation, this.options)
             }
           },
         }),

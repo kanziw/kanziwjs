@@ -3,7 +3,7 @@ import { EchoService } from './gen/echo/v1/echo_connect'
 
 const PORT = 8080
 
-new GrpcEsServer()
+new GrpcEsServer({ jsonOptions: { useProtoFieldName: true, ignoreUnknownFields: true } })
   .use(stdoutUnaryServerInterceptor())
   .register(EchoService, {
     echo: (req) => ({ message: `you said: ${req.message}` }),
