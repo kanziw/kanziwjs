@@ -22,4 +22,4 @@ new GrpcEsServer({ jsonOptions: { useProtoFieldName: true, ignoreUnknownFields: 
 console.log(`🏃 Grpc Server is running on port ${PORT}`)
 ```
 
-For more information, see the documentation (https://connectrpc.com/docs/node/getting-started)
+For more information, see the [documentation](https://connectrpc.com/docs/node/getting-started).
