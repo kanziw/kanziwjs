@@ -1,6 +1,5 @@
 {
   "name": "@kanziw/grpc-es",
-  "type": "module",
   "version": "0.0.1",
   "description": "A collection of grpc libraries using connect-es",
   "repository": {
@@ -24,14 +23,29 @@
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
   },
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/index.d.js",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/cjs/index.d.js",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "types": "./lib/esm/index.d.js",
+  "main": "./lib/cjs/index.js",
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "generate:example-stubs": "buf generate",
     "run:example": "tsx watch --clear-screen=false example/server.ts",
     "clean": "rimraf lib",
-    "build": "yarn clean && yarn tsc",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs",
+    "build:esm": "yarn tsc --noEmit false --module es2022 --outDir lib/esm",
+    "build:cjs": "yarn tsc --noEmit false --module commonjs --outDir lib/cjs",
     "publish": "yarn build && yarn publish-if-not-published"
   },
   "devDependencies": {

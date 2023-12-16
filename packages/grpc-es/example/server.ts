@@ -1,4 +1,4 @@
-import { GrpcEsServer } from '../src'
+import { GrpcEsServer } from '../'
 import { EchoService } from './gen/echo/v1/echo_connect'
 
 const PORT = 8080
