@@ -18,6 +18,11 @@ jobs:
           node-version-file: '.tool-versions'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
+
       - name: Publish packages
         run: |
           yarn publish

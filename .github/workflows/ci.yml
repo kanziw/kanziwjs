@@ -12,6 +12,11 @@ jobs:
         with:
           node-version-file: '.tool-versions'
 
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
+
       - name: Lint
         run: |
           yarn lint
@@ -28,6 +33,11 @@ jobs:
         with:
           node-version-file: '.tool-versions'
 
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
+
       - name: Test with coverage
         run: |
           yarn test --coverage
@@ -43,6 +53,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.tool-versions'
+
+      - name: Yarn install
+        run: |
+          yarn install --immutable --immutable-cache
+        shell: bash
 
       - name: Check is publishable versions
         run: |
