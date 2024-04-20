@@ -1,14 +1,11 @@
 {
   "name": "@kanziw/time",
-  "version": "0.2.3",
+  "version": "0.3.3",
   "description": "A collection of utility libraries about time",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanziw/kanziwjs.git",
     "directory": "packages/time"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "homepage": "https://github.com/kanziw/kanziwjs/tree/main/packages/time#readme",
   "keywords": [
@@ -24,13 +21,53 @@
     "name": "Jiwoong Jung",
     "email": "kanziwoong@gmail.com"
   },
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "type": "commonjs",
+    "main": "./index.js",
+    "types": "./index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./index.d.ts",
+        "import": "./index.js",
+        "require": "./index.cjs"
+      },
+      "./cancellableDelay": {
+        "types": "./cancellableDelay.d.ts",
+        "import": "./cancellableDelay.js",
+        "require": "./cancellableDelay.cjs"
+      },
+      "./delay": {
+        "types": "./delay.d.ts",
+        "import": "./delay.js",
+        "require": "./delay.cjs"
+      },
+      "./stopwatch": {
+        "types": "./stopwatch.d.ts",
+        "import": "./stopwatch.js",
+        "require": "./stopwatch.cjs"
+      },
+      "./timezone": {
+        "types": "./timezone.d.ts",
+        "import": "./timezone.js",
+        "require": "./timezone.cjs"
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "/*.d.ts",
+    "/*.*js"
+  ],
   "scripts": {
     "test": "yarn workspace kanziwjs test packages/time",
-    "clean": "rimraf lib",
-    "build": "yarn clean && yarn tsc",
-    "publish": "yarn build && yarn publish-if-not-published"
+    "prepack": "yarn build",
+    "build": "node scripts/build-exports.js && tsc -p tsconfig.build.json",
+    "publish": "yarn build && yarn publish-if-not-published",
+    "publish:rc": "yarn build && yarn publish-if-not-published --no-tag-check -- --tag rc"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",

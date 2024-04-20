@@ -1,6 +1,6 @@
 import { performance } from 'perf_hooks'
 
-export const startStopwatch = () => {
+const startStopwatch = () => {
   const start = performance.now()
 
   return {
@@ -9,3 +9,5 @@ export const startStopwatch = () => {
     },
   }
 }
+
+export default startStopwatch

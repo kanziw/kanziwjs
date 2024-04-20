@@ -19,6 +19,14 @@ await Promise.all([
 ])
 ```
 
+## delay
+```ts
+import { delay } from '@kanziw/time'
+
+// It takes about 100ms
+await delay(100)
+```
+
 ## stopwatch
 
 Measure elapsed ms using perf_hooks.performance

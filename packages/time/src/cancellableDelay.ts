@@ -6,7 +6,7 @@ type CancellabledDelay<T> = {
   promise: Promise<T>
 }
 
-export const cancellableDelay = <T>(ms: number, value?: T): CancellabledDelay<Maybe<T>> => {
+const cancellableDelay = <T>(ms: number, value?: T): CancellabledDelay<Maybe<T>> => {
   /* istanbul ignore next line */
   const ret: CancellabledDelay<Maybe<T>> = {
     cancel: () => undefined,
@@ -31,3 +31,5 @@ export const cancellableDelay = <T>(ms: number, value?: T): CancellabledDelay<Ma
 
   return ret
 }
+
+export default cancellableDelay
