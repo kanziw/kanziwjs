@@ -23,7 +23,7 @@ jobs:
 
       - name: Build for type check
         run: |
-          yarn build --noEmit
+          yarn build
 
   test:
     runs-on: ubuntu-latest
