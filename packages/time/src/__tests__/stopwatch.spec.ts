@@ -1,6 +1,5 @@
-import { setTimeout as delay } from 'timers/promises'
-
-import { startStopwatch } from '../stopwatch'
+import delay from '../delay'
+import startStopwatch from '../stopwatch'
 
 describe('startStopwatch', () => {
   test('end', async () => {
