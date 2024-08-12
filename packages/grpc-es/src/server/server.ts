@@ -3,6 +3,7 @@ import type { AnyMessage, ServiceType } from '@bufbuild/protobuf'
 import type { HandlerContext, ServiceImpl } from '@connectrpc/connect'
 import { connectNodeAdapter } from '@connectrpc/connect-node'
 import { UniversalHandlerOptions } from '@connectrpc/connect/protocol'
+import { Code, GrpcError } from './status.js'
 import type { Handler, Interceptor } from './types.js'
 
 export class GrpcEsServer {
@@ -16,8 +17,9 @@ export class GrpcEsServer {
     return this
   }
 
-  register<Service extends ServiceType>(service: Service, implementation: ServiceImpl<Service>): this {
-    const interceptorAppliedImplementation = {} as ServiceImpl<typeof service>
+  register<Service extends ServiceType>(service: Service, partialImplementation: Partial<ServiceImpl<Service>>): this {
+    const implementation = { ...makeUnimplementedService(service), ...partialImplementation } as ServiceImpl<Service>
+    const interceptorAppliedImplementation = {} as ServiceImpl<Service>
 
     for (const [key, handler] of Object.entries(implementation)) {
       let appliedHandler = handler
@@ -46,4 +48,17 @@ export class GrpcEsServer {
       )
       .listen(port)
   }
+}
+
+function makeUnimplementedService<Service extends ServiceType>(service: Service): ServiceImpl<Service> {
+  return Object.keys(service.methods).reduce(
+    (us, method) => {
+      // @ts-ignore
+      us[method] = () => {
+        throw new GrpcError(`Unimplemented method: [${method}]`, Code.Unimplemented)
+      }
+      return us
+    },
+    {} as ServiceImpl<Service>,
+  )
 }
