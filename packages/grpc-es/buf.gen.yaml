@@ -1,10 +1,12 @@
-version: v1
+version: v2
 managed:
   enabled: true
 plugins:
-  - plugin: es
+  - remote: buf.build/bufbuild/es:v1.10.0
     out: example/gen
-    opt: target=ts
-  - plugin: connect-es
+    opt: 
+      - target=ts
+  - remote: buf.build/connectrpc/es:v1.4.0
     out: example/gen
-    opt: target=ts
+    opt: 
+      - target=ts
