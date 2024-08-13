@@ -2,6 +2,7 @@ version: v2
 modules:
   - path: example/proto
 deps:
+  - buf.build/protocolbuffers/wellknowntypes
   - buf.build/googleapis/googleapis
 breaking:
   use:

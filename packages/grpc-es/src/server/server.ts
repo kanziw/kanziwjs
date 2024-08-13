@@ -4,7 +4,7 @@ import type { HandlerContext, ServiceImpl } from '@connectrpc/connect'
 import { connectNodeAdapter } from '@connectrpc/connect-node'
 import { UniversalHandlerOptions } from '@connectrpc/connect/protocol'
 import { Code, GrpcError } from './status.js'
-import type { Handler, Interceptor } from './types.js'
+import type { Interceptor } from './types.js'
 
 export class GrpcEsServer {
   private interceptors: Interceptor[] = []
@@ -18,17 +18,18 @@ export class GrpcEsServer {
   }
 
   register<Service extends ServiceType>(service: Service, partialImplementation: Partial<ServiceImpl<Service>>): this {
-    const implementation = { ...makeUnimplementedService(service), ...partialImplementation } as ServiceImpl<Service>
-    const interceptorAppliedImplementation = {} as ServiceImpl<Service>
+    type Implementation = ServiceImpl<Service>
+    const implementation = { ...makeUnimplementedService(service), ...partialImplementation } as Implementation
+    const interceptorAppliedImplementation = {} as Implementation
 
     for (const [key, handler] of Object.entries(implementation)) {
       let appliedHandler = handler
       for (const interceptor of this.interceptors) {
         const currentHandler = appliedHandler
-        appliedHandler = ((req: AnyMessage & AsyncIterable<AnyMessage>, ctx: HandlerContext) =>
-          interceptor(req, ctx, currentHandler)) as Handler
+        appliedHandler = (req: AnyMessage & AsyncIterable<AnyMessage>, ctx: HandlerContext) =>
+          interceptor(req, ctx, currentHandler)
       }
-      interceptorAppliedImplementation[key as keyof ServiceImpl<typeof service>] = appliedHandler
+      interceptorAppliedImplementation[key as keyof Implementation] = appliedHandler
     }
     this.services.push({ service, implementation: interceptorAppliedImplementation })
 

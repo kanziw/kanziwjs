@@ -1,6 +1,7 @@
 {
   "name": "@kanziw/grpc-es",
-  "version": "0.2.1",
+  "type": "module",
+  "version": "0.2.2",
   "description": "A collection of grpc libraries using connect-es",
   "repository": {
     "type": "git",

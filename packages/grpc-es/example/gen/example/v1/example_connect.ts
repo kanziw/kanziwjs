@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AddRequest, AddResponse, EchoRequest, EchoResponse } from "./example_pb.js";
+import { AddRequest, AddResponse, ChatRequest, ChatResponse, EchoRequest, EchoResponse, EchoStreamRequest, EchoStreamResponse, StreamEchoRequest, StreamEchoResponse } from "./example_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -20,6 +20,33 @@ export const ExampleService = {
       I: EchoRequest,
       O: EchoResponse,
       kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc echo.v1.ExampleService.EchoStream
+     */
+    echoStream: {
+      name: "EchoStream",
+      I: EchoStreamRequest,
+      O: EchoStreamResponse,
+      kind: MethodKind.ServerStreaming,
+    },
+    /**
+     * @generated from rpc echo.v1.ExampleService.StreamEcho
+     */
+    streamEcho: {
+      name: "StreamEcho",
+      I: StreamEchoRequest,
+      O: StreamEchoResponse,
+      kind: MethodKind.ClientStreaming,
+    },
+    /**
+     * @generated from rpc echo.v1.ExampleService.Chat
+     */
+    chat: {
+      name: "Chat",
+      I: ChatRequest,
+      O: ChatResponse,
+      kind: MethodKind.BiDiStreaming,
     },
     /**
      * @generated from rpc echo.v1.ExampleService.Add

@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
+import { Message, proto3, protoInt64, Timestamp } from "@bufbuild/protobuf";
 
 /**
  * @generated from message echo.v1.EchoRequest
@@ -52,6 +52,11 @@ export class EchoResponse extends Message<EchoResponse> {
    */
   message = "";
 
+  /**
+   * @generated from field: google.protobuf.Timestamp response_time = 2;
+   */
+  responseTime?: Timestamp;
+
   constructor(data?: PartialMessage<EchoResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -61,6 +66,7 @@ export class EchoResponse extends Message<EchoResponse> {
   static readonly typeName = "echo.v1.EchoResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "response_time", kind: "message", T: Timestamp },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EchoResponse {
@@ -77,6 +83,276 @@ export class EchoResponse extends Message<EchoResponse> {
 
   static equals(a: EchoResponse | PlainMessage<EchoResponse> | undefined, b: EchoResponse | PlainMessage<EchoResponse> | undefined): boolean {
     return proto3.util.equals(EchoResponse, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.EchoStreamRequest
+ */
+export class EchoStreamRequest extends Message<EchoStreamRequest> {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message = "";
+
+  /**
+   * @generated from field: int32 repeat_count = 2;
+   */
+  repeatCount = 0;
+
+  constructor(data?: PartialMessage<EchoStreamRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.EchoStreamRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "repeat_count", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EchoStreamRequest {
+    return new EchoStreamRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EchoStreamRequest {
+    return new EchoStreamRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EchoStreamRequest {
+    return new EchoStreamRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EchoStreamRequest | PlainMessage<EchoStreamRequest> | undefined, b: EchoStreamRequest | PlainMessage<EchoStreamRequest> | undefined): boolean {
+    return proto3.util.equals(EchoStreamRequest, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.EchoStreamResponse
+ */
+export class EchoStreamResponse extends Message<EchoStreamResponse> {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message = "";
+
+  /**
+   * @generated from field: int32 sequence_number = 2;
+   */
+  sequenceNumber = 0;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp response_time = 3;
+   */
+  responseTime?: Timestamp;
+
+  constructor(data?: PartialMessage<EchoStreamResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.EchoStreamResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "sequence_number", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "response_time", kind: "message", T: Timestamp },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EchoStreamResponse {
+    return new EchoStreamResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EchoStreamResponse {
+    return new EchoStreamResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EchoStreamResponse {
+    return new EchoStreamResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EchoStreamResponse | PlainMessage<EchoStreamResponse> | undefined, b: EchoStreamResponse | PlainMessage<EchoStreamResponse> | undefined): boolean {
+    return proto3.util.equals(EchoStreamResponse, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.StreamEchoRequest
+ */
+export class StreamEchoRequest extends Message<StreamEchoRequest> {
+  /**
+   * @generated from field: string message_part = 1;
+   */
+  messagePart = "";
+
+  constructor(data?: PartialMessage<StreamEchoRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.StreamEchoRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "message_part", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): StreamEchoRequest {
+    return new StreamEchoRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): StreamEchoRequest {
+    return new StreamEchoRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): StreamEchoRequest {
+    return new StreamEchoRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: StreamEchoRequest | PlainMessage<StreamEchoRequest> | undefined, b: StreamEchoRequest | PlainMessage<StreamEchoRequest> | undefined): boolean {
+    return proto3.util.equals(StreamEchoRequest, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.StreamEchoResponse
+ */
+export class StreamEchoResponse extends Message<StreamEchoResponse> {
+  /**
+   * @generated from field: string full_message = 1;
+   */
+  fullMessage = "";
+
+  /**
+   * @generated from field: google.protobuf.Timestamp response_time = 2;
+   */
+  responseTime?: Timestamp;
+
+  constructor(data?: PartialMessage<StreamEchoResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.StreamEchoResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "full_message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "response_time", kind: "message", T: Timestamp },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): StreamEchoResponse {
+    return new StreamEchoResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): StreamEchoResponse {
+    return new StreamEchoResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): StreamEchoResponse {
+    return new StreamEchoResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: StreamEchoResponse | PlainMessage<StreamEchoResponse> | undefined, b: StreamEchoResponse | PlainMessage<StreamEchoResponse> | undefined): boolean {
+    return proto3.util.equals(StreamEchoResponse, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.ChatRequest
+ */
+export class ChatRequest extends Message<ChatRequest> {
+  /**
+   * @generated from field: string user_id = 1;
+   */
+  userId = "";
+
+  /**
+   * @generated from field: string message = 2;
+   */
+  message = "";
+
+  /**
+   * @generated from field: google.protobuf.Timestamp response_time = 3;
+   */
+  responseTime?: Timestamp;
+
+  constructor(data?: PartialMessage<ChatRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.ChatRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "user_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "response_time", kind: "message", T: Timestamp },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatRequest {
+    return new ChatRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatRequest {
+    return new ChatRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatRequest {
+    return new ChatRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ChatRequest | PlainMessage<ChatRequest> | undefined, b: ChatRequest | PlainMessage<ChatRequest> | undefined): boolean {
+    return proto3.util.equals(ChatRequest, a, b);
+  }
+}
+
+/**
+ * @generated from message echo.v1.ChatResponse
+ */
+export class ChatResponse extends Message<ChatResponse> {
+  /**
+   * @generated from field: string user_id = 1;
+   */
+  userId = "";
+
+  /**
+   * @generated from field: string message = 2;
+   */
+  message = "";
+
+  /**
+   * @generated from field: google.protobuf.Timestamp response_time = 3;
+   */
+  responseTime?: Timestamp;
+
+  constructor(data?: PartialMessage<ChatResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "echo.v1.ChatResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "user_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "message", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "response_time", kind: "message", T: Timestamp },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ChatResponse {
+    return new ChatResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ChatResponse {
+    return new ChatResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ChatResponse {
+    return new ChatResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ChatResponse | PlainMessage<ChatResponse> | undefined, b: ChatResponse | PlainMessage<ChatResponse> | undefined): boolean {
+    return proto3.util.equals(ChatResponse, a, b);
   }
 }
 
