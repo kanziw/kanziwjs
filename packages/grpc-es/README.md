@@ -45,4 +45,8 @@ new GrpcEsServer({ jsonOptions: { useProtoFieldName: true } })
 console.log(`🏃 Grpc Server is running on port ${PORT}`)
 ```
 
+### Limitations
+
+This project currently supports only "UnaryCall" in gRPC calls. Other gRPC call types, such as server streaming, client streaming, and bidirectional streaming, are not supported at this time.
+
 For more information, see the [documentation](https://connectrpc.com/docs/node/getting-started).
