@@ -1,7 +1,7 @@
 {
   "name": "@kanziw/grpc-es",
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A collection of grpc libraries using connect-es",
   "repository": {
     "type": "git",
@@ -35,14 +35,9 @@
     "@connectrpc/connect": "^1.4.0",
     "@connectrpc/connect-node": "^1.4.0"
   },
-  "peerDependencies": {
-    "@bufbuild/protobuf": "^1.10.0",
-    "@connectrpc/connect": "^1.4.0",
-    "@connectrpc/connect-node": "^1.4.0"
-  },
   "devDependencies": {
     "@bufbuild/buf": "^1.36.0",
-    "@bufbuild/protoc-gen-es": "^2.0.0",
+    "@bufbuild/protoc-gen-es": "^1.10.0",
     "@connectrpc/protoc-gen-connect-es": "^1.4.0",
     "nanobundle": "^2.0.0",
     "publish-if-not-published": "^3.1.3",

@@ -9,7 +9,6 @@ import type { Interceptor } from './types.js'
 export class GrpcEsServer {
   private interceptors: Interceptor[] = []
   private services: { service: ServiceType; implementation: ServiceImpl<ServiceType> }[] = []
-  private http2Server: http2.Http2Server | null = null
 
   constructor(private options?: Partial<UniversalHandlerOptions>) {}
 
@@ -38,7 +37,7 @@ export class GrpcEsServer {
   }
 
   listenAndServe(port: number): void {
-    this.http2Server = http2
+    http2
       .createServer(
         connectNodeAdapter({
           routes: (router) => {
@@ -49,17 +48,6 @@ export class GrpcEsServer {
         }),
       )
       .listen(port)
-  }
-
-  async close(): Promise<void> {
-    const server = this.http2Server
-    if (!server) {
-      return
-    }
-
-    return new Promise((resolve, reject) => {
-      server.close((err) => (err ? reject(err) : resolve()))
-    })
   }
 }
 
