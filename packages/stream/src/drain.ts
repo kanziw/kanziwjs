@@ -1,4 +1,4 @@
-import { Stream } from 'stream'
+import type { Stream } from 'node:stream'
 
 export const drain = async (stream: Stream): Promise<Buffer> => {
   const bufs: Uint8Array[] = []

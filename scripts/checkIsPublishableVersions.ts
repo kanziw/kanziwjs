@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import walkSync from 'walk-sync'
 
 const packagePaths = walkSync('packages', { globs: ['*/package.json'], includeBasePath: true })

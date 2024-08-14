@@ -14,7 +14,7 @@ A collection of utility libraries used by other Kanziw JS/TS projects.
 - [date](./packages/date): [@kanziw/date](https://www.npmjs.com/package/@kanziw/date)
 - [error](./packages/error): [@kanziw/error](https://www.npmjs.com/package/@kanziw/error)
 - [eslint-config-kanziw](./packages/eslint-config-kanziw): [@kanziw/eslint-config-kanziw](https://www.npmjs.com/package/eslint-config-kanziw) `DEPRECATED`
-- [grpc-es](./packages/grpc-es): [@kanziw/grpc-es](https://www.npmjs.com/package/@kanziw/grpc-es)
+- [grpc-es](./packages/grpc-es): [@kanziw/grpc-es](https://www.npmjs.com/package/@kanziw/grpc-es) `DEPRECATED`
 - [promise](./packages/promise): [@kanziw/promise](https://www.npmjs.com/package/@kanziw/promise)
 - [stream](./packages/stream): [@kanziw/stream](https://www.npmjs.com/package/@kanziw/stream)
 - [time](./packages/time): [@kanziw/time](https://www.npmjs.com/package/@kanziw/time)

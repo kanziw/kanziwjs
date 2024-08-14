@@ -1,4 +1,4 @@
-import { Stream } from 'stream'
+import type { Stream } from 'node:stream'
 
 export const waitUntilFinished = (stream: Stream) =>
   new Promise((resolve, reject) => {
