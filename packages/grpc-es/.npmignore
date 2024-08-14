@@ -1,6 +1,0 @@
-src/
-**/__tests__/
-tsconfig.json
-example/
-biome.json
-buf.*.yaml

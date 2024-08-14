@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["index.ts"],
+  "sourcesContent": ["console.log('DEPRECATED! Use connect-node directry instead.')\nprocess.exit(1)\n"],
+  "mappings": ";;;AAAA,QAAQ,IAAI,gDAAgD;AAC5D,QAAQ,KAAK,CAAC;",
+  "names": []
+}
