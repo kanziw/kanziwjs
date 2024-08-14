@@ -42,7 +42,7 @@ export const formatWithTimezoneOffset = (offset: Offset): ((input: Date | number
   const [hours, minutes] = offset
     .slice(1)
     .split(':')
-    .map((numericString) => parseInt(numericString, 10))
+    .map((numericString) => Number.parseInt(numericString, 10))
 
   return (input: Date | number) => {
     const ts = typeof input === 'number' ? input : input.getTime()

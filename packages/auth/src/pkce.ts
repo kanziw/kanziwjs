@@ -1,7 +1,7 @@
 /**
  * @see https://dropbox.tech/developers/pkce--what-and-why-
  */
-import crypto from 'crypto'
+import crypto from 'node:crypto'
 
 interface PKCE {
   codeChallengeMethod: 'S256'

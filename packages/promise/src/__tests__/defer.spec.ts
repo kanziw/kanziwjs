@@ -1,4 +1,4 @@
-import { setTimeout as delay } from 'timers/promises'
+import { setTimeout as delay } from 'node:timers/promises'
 
 import { defer } from '../defer'
 

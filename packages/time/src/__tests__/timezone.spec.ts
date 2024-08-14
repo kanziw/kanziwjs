@@ -1,4 +1,4 @@
-import { TimeFormatter, formatWithTimezoneOffset, kstFormat, utcFormat } from '../timezone'
+import { type TimeFormatter, formatWithTimezoneOffset, kstFormat, utcFormat } from '../timezone'
 
 describe('timezone', () => {
   const testWithDateAndMs = (
